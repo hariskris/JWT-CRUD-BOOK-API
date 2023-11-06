@@ -55,7 +55,7 @@ module.exports = {
   },
   deleteById: function (req, res, next) {
     let bookQuery = {};
-    bookQuery.employeeId = req.params.employeeId;
+    bookQuery.bookId = req.params.bookId;
     bookQuery.clientId = req.body.userId;
     bookModel.findOneAndRemove(bookQuery, function (err, bookInfo) {
       if (err) next(err);
